@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Hiển thị số nguyên tố</title>
-
+<p id="results"></p>
 </head>
 <body>
 <script>
-    let number= prompt("Hãy nhập số nguyên tố bạn cần in")
-    let count;
-    let i=0
-
-    for(count=0;count<number;count++){
-        i=i+2
-        document.write(i+"<br>")
+let number=prompt("Hãy nhập số nguyên tố muốn in ")
+let cnt=0
+let run =2;
+ac:    while (cnt<number){
+    for(let i=2; i<run; i++){
+        if( run % i == 0){
+            run++
+            continue ac
+        }
     }
+    document.write(run +"<br>")
+    cnt++
+    run++
+}
+
+
 </script>
 </body>
 </html>
