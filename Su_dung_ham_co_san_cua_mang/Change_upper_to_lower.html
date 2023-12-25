@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Turn upper to lower</title>
+</head>
+<body>
+<script>
+    let character = prompt("Input your character")
+    console.log(character)
+    let result=''
+for ( let i=0; i<character.length; i++){
+
+    if(character.charAt(i)>="a" && character.charAt(i)<="z"){
+        result+=character.charAt(i).toUpperCase()
+    }else if(character.charAt(i)>="A" && character.charAt(i)<="Z"){
+        result+=character.charAt(i).toLowerCase()
+    }else{
+        result+= " "
+    }
+}console.log(result)
+</script>
+</body>
+</html>
