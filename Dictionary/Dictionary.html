@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<input type="text" id ="vocabulary">
+<button type= "button" onclick="translates()">Translate</button>
+<p id="result"></p>
+</body>
+<script>
+    function translates(){
+    let b = document.getElementById("result")
+    let a = document.getElementById("vocabulary")
+    let vn=["một","hai","ba","bốn","năm","sáu","bảy","tám","chín","mười","trăm","nghìn","triệu","tỷ"]
+    let us=["one","two","three","four","five","six","seven","eight","nine","ten","hunred","thousand","million","billion"]
+    let i = 0
+        for( i; i < vn.length; i++) {
+        if (vn[i] === a.value) {
+            b.innerHTML = us[i]
+            break
+        }
+    }if (i ==vn.length){
+        b.innerHTML="No data"
+        }
+    }
+</script>
+</html>
