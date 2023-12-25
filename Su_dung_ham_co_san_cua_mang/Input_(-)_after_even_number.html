@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input - after even number</title>
+</head>
+<body>
+<p id="newNumber"></p>
+<script>
+let number= [2,45,6,31,3,56,8,9]
+ for(let i=0;i<number.length; i++){
+    let r = number[i]%2
+    switch (r){
+        case 0 :
+            i++;
+            number.splice(i,0,"-")
+    }
+}
+document.getElementById("newNumber").innerHTML=number.join(" ")
+</script>
+</body>
+</html>
