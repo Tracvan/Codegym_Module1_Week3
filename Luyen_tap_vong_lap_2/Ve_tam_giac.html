@@ -1,10 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Vẽ tam giác</title>
 </head>
 <body>
-$END$
+<div id="result_1"></div>
+<br>
+<div id="result_2"></div>
+<br>
+<div id="result_3"></div>
+<br>
+<div id="result_4">
+</div>
+<script>
+    let a = 0
+    for (let i = 1; i <= 5; i++) {
+        while (a < i) {
+            document.getElementById("result_1").innerHTML += "*"
+            a++
+        }
+        a = 0
+        document.getElementById("result_1").innerHTML += "<br>"
+    }
+    for (let i = 5; i >= 1; i--) {
+        a = 0
+        while (a < i) {
+            document.getElementById("result_2").innerHTML += "*"
+            a++
+        }
+        a = 0
+        document.getElementById("result_2").innerHTML += "<br>"
+    }
+    let a1 = 4
+    let b1 =1
+    for (let i = 5; i >= 1; i--) {
+
+        for (let j = a1; j >= 1; j--) {
+            document.getElementById("result_3").innerHTML += "&#160&#160"
+            }
+        a1--
+
+        for (let j = b1; j >= 1; j--) {
+            document.getElementById("result_3").innerHTML += "*"
+        }
+        b1++
+        document.getElementById("result_3").innerHTML += "<br>"
+    }
+    let x =4
+    let y=1
+    document.getElementById("result_4").innerHTML="***** <br>"
+    for (let i = 5; i >= 1; i--) {
+        for (let j = y ; j >= 1; j--) {
+            document.getElementById("result_4").innerHTML += "&#160&#160"
+        }
+        y++
+        for (let j = x; j >= 1; j--) {
+            document.getElementById("result_4").innerHTML +="*"
+        }
+        document.getElementById("result_4").innerHTML += "<br>"
+        x--
+    }
+        
+</script>
 </body>
 </html>
