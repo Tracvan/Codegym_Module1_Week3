@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max_value_in_array</title>
+</head>
+<body>
+<script>
+let arrs = [5,7,12,6,-1,4,7];
+let max = arrs[0]
+let index = 0
+for(let i = 0; i< arrs.length; i++){
+    if (max<arrs[i]){
+        max = arrs[i]
+        index=i
+    }
+}alert("Max number is " + max + " in position" + index)
+</script>
+</body>
+</html>
