@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Số tiền vay</th>
+        <th>Lãi suất hàng tháng</th>
+        <th>Số tháng vay</th>
+        <th>Tổng số tiền phải trả</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="borrow"></td>
+        <td id = "profit">3%</td>
+        <td ><input id="month" type="text"> </td>
+        <td id="final"> </td>
+    </tr>
+</table>
+<button onclick="check()" type="button" id="check">Check</button>
+</body>
+</html>
+<script>
+    function check() {
+        let i = 0
+        let m = parseInt(document.getElementById("month").value)
+        let x = parseInt(document.getElementById("borrow").value)
+        let result=x
+        for (i = 0; i < m; i++) {
+            result=result + (result * 0.03)
+
+        }
+        document.getElementById("final").innerHTML=result
+    }
+
+</script>
