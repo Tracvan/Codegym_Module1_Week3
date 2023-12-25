@@ -9,9 +9,13 @@
 <script>
     for (let i = 0; i < 5; i++) {
         if (i == 0 || i == 4) {
-            document.getElementById("draw").innerHTML += "******* <br>"
+            document.getElementById("draw").innerHTML += "************ <br>"
         } else {
-            document.getElementById("draw").innerHTML += "* &#160&#160&#160&#160&#160&#160&#160&#160 * <br>"
+            document.getElementById("draw").innerHTML += "*"
+            for (let j = 0; j < 10; j++) {
+                document.getElementById("draw").innerHTML +="&#160&#160"
+            }
+            document.getElementById("draw").innerHTML += "* <br>"
         }
     }
 
