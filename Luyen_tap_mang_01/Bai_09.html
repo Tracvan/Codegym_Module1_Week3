@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C Array</title>
+</head>
+<body>
+<p id="aArray"></p>
+<p id="bArray"></p>
+<p id="cArray"></p>
+<script>
+    let aArray=[]
+    let bArray=[]
+    let cArray=[]
+    for(i=0; i<10;i++) {
+        let number = prompt("Input Number")
+        aArray.push(number);
+    }document.getElementById("aArray").innerHTML=aArray
+
+    for(i=0; i<10;i++) {
+        let number = prompt("Input Number")
+        bArray.push(number);
+    }document.getElementById("bArray").innerHTML=bArray
+    cArray=aArray.concat(bArray)
+    document.getElementById("cArray").innerHTML=cArray
+
+
+
+
+</script>
+</body>
+</html>

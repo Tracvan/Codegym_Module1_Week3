@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SORT ORDER</title>
+</head>
+<body>
+<p id="Input"></p>
+<id id="New"></id>
+<script>
+    let array=[]
+    for(i=0; i<10;i++){
+        let number=prompt("Input Number")
+         array.push(number)
+    }document.getElementById("Input").innerHTML="Array has been inputted: "+ array
+    array.sort(function(a,b){
+    return b-a;
+    })
+    document.getElementById("New").innerHTML="Have been sorted: " + array
+</script>
+</body>
+</html>

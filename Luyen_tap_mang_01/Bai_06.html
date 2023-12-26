@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm Giá Trị Của Mảng</title>
+</head>
+<body>
+<p>Dãy số cho sẵn là :</p>
+<p>[ -3;5;1;9;10;20;50;23;21;0]</p>
+<script>
+    let number = [-3,5,1,9,10,20,50,23,21,0];
+    let i = 0
+    let checkNumber = prompt("Let's check")
+    for(i; i<number.length; i++){
+        if(number[i] == checkNumber){
+            alert(checkNumber + " is in Array ")
+            break
+        }
+    }if(i== number.length){
+        alert(checkNumber + " is not in Array")
+    }
+
+</script>
+</body>
+</html>
