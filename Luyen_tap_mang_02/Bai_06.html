@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change "-" to "_"</title>
+</head>
+<body>
+<script>
+    let essay = prompt("Input your essay")
+    essay=essay.split('')
+    for (let i = 0; i < essay.length; i++) {
+        if (essay[i] === "-") {
+            essay[i] = "_"
+        }
+    }
+    console.log(essay.join(''))
+</script>
+</body>
+</html>

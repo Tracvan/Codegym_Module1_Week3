@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Array</title>
+</head>
+<body>
+<script>
+    let essay1 = prompt("Input your essay 1")
+    let essay2 = prompt("Input your essay 2")
+    let check=true
+    if (essay1.length == essay2.length) {
+        for (let i = 0; i < essay1.length; i++) {
+            if (essay1[i] === essay2[i]) {
+                check = true
+                continue
+            }else{
+                check = false
+                break
+            }
+        }if(check){
+            alert("Essay 1 and Essay 2 are same")
+        }else{
+            alert("Essay 1 and Essay 2 are not the same")
+        }
+    }else{
+        alert("Essay 1 and Essay 2 are not the same")
+    }
+</script>
+</body>
+</html>

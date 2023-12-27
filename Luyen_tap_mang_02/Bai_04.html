@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count Character</title>
+</head>
+<body>
+<script>
+
+    let str = prompt("Input your essay")
+    let b= str.split(' ')
+    let minus=0
+    let c;
+    console.log(b)
+    for ( let i=0;i<b.length;i++){
+        if(b[i]===''){
+            minus+=1
+        }
+        c=b.length-minus
+    }alert("Your essay has " + c + "character")
+
+</script>
+</body>
+</html>
