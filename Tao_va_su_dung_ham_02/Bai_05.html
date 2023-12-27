@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alert Min of 3 number</title>
+</head>
+<body>
+<script>
+    function check(a, b, c) {
+        if (a < b && a < c) {
+            alert(a + " is min of three")
+        } else if (b < a && b < c) {
+            alert(b + " is min of three")
+        } else if (c < a && c < b) {
+            alert(c + " is min of three")
+        }
+    }
+
+    let x = parseInt(prompt("Input first number"));
+    let y = parseInt(prompt("Input second number"));
+    let z = parseInt(prompt("Input third number"));
+    check(x, y, z)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change position</title>
+</head>
+<body>
+<script>
+    function change(a,b){
+        let arrs = [a,b]
+        let temp;
+        temp=arrs[0]
+        arrs[0]=arrs[1]
+        arrs[1]=temp
+        alert(arrs)
+    }
+    let x = parseInt(prompt("Input first number"))
+    let y = parseInt(prompt("Input second number"))
+    change(x,y)
+</script>
+</body>
+</html>
