@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amstrong Number</title>
+</head>
+<h1>Amstrong Number</h1>
+<body>
+<input id="in">
+<button onclick="check()">Check</button>
+<script>
+
+function check(){
+    let number = document.getElementById("in").value
+    let n = number.length
+    let sum=0
+    for(i=0;i<number.length;i++){
+        sum += parseInt(number[i]**n)
+    }if(sum==number){
+        alert(number + " là số Amstrong")
+    }else{
+        alert(number + " không là số Amstrong")
+    }
+}
+</script>
+</body>
+</html>

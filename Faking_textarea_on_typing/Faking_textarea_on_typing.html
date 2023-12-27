@@ -1,0 +1,68 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Textarea On Typing</title>
+</head>
+<body>
+<h1>Typing slowly</h1>
+<textarea id="prank" onkeydown="fake()"></textarea>
+<script>
+    let result=[]
+    let fakemessage=["T","ô","i"," ","l","à","đ","ồ"," ","n","g","ố,","c"," ","h","i","h","i"]
+    let i = 0
+    function fake(){
+        let input = document.getElementById("prank").value
+        for (i; i < input.length;i++){
+            result.push(fakemessage[i])
+        }console.log(result)
+        if(result.length>fakemessage.length) {
+            result = []
+            i = 0
+        }
+    }
+
+</script>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Textarea On Typing</title>
+</head>
+
+<body>
+<h1>Typing slowly</h1>
+<textarea id="prank" oninput="fake()" value=""></textarea>
+
+
+</body>
+
+</html>
+
+<script>
+    let run = 0
+
+    let fakemessage = ["T","ô","i"," ","l","à"," ","đ","ồ"," ","n","g","ố","c"," ","h","i","h","i"]
+
+    function fake() {
+        let result = ''
+        let input = document.getElementById("prank")
+
+        for (let i = 0; i <= run; i++) {
+            result += fakemessage[i]
+        }
+        run++;
+        console.log(result)
+        if (run == 19) {
+            run=0
+        }
+        input.value = result
+
+    }
+
+
+</script>
