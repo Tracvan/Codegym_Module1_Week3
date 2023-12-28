@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check * in array</title>
+</head>
+<body>
+<h1>Check * in array</h1>
+<input type="text" id="in"> <button onclick="check()">Check</button>
+<p id="new"></p>
+
+<script>
+    function check(){
+    let input = document.getElementById("in").value
+    let arrs = input.split('')
+    for (let i = 0; i < arrs.length; i++){
+        if (arrs[i] === "*") {
+            arrs.splice(i,1,"") 
+        }
+    }console.log(arrs)
+        document.getElementById("new").innerHTML=arrs.join('')
+    }
+
+</script>
+</body>
+</html>
