@@ -9,11 +9,31 @@
 <input id="in">
 <button onclick="permutation()">Permutation</button>
 <script>
-    let str = document.getElementById("in")
-    let n = str.length
-    function permutation(){
+    function permutation() {
+        let str = document.getElementById("in").value
+        let result = ''
 
+        for (let i = 0; i < str.length; i++) {
+            if (result.indexOf(str[i]) == -1) {
+                result += str[i]
+                for (let j = 0; j < str.length; j++) {
+                    if (result.indexOf(str[j]) == -1) {
+                        result += str[j]
+                        for (let k = 0; k < str.length; k++) {
+                            if (result.indexOf(str[k]) == -1) {
+                                result += str[k]
+                                console.log(result)
+                                result = result.slice(0, result.length - 1)
+                            }
+                        }
+                        result = result.slice(0, result.length - 1)
+                    }
+                }
+                result = result.slice(0, result.length - 1)
+            }
+        }
     }
+
 </script>
 </body>
 </html>

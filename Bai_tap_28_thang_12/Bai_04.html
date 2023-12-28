@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ascending Array Check</title>
+</head>
+<body>
+<script>
+    let arrs = ["11","12","22","33","53","55","65"]
+    let isAscending = true
+    for (let i=0; i< arrs.length; i++){
+
+        if ( arrs[i]>arrs[i+1]){
+            isAscending = false
+            break
+        }
+        }if(isAscending){
+        alert("Array is ascending")
+    }else{
+        alert("Array is not ascending")
+    }
+</script>
+</body>
+</html>

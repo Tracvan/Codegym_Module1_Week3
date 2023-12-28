@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Average of 2-Dementional Array</title>
+</head>
+<body>
+<script>
+    let arrs=[["1","3","5","7","9"],["2","4","6","8","10"]]
+    let sum = 0
+    let average;
+    let newarrs=[]
+
+    for(let i=0; i<arrs.length;i++){
+        for(let j=0;j<arrs[i].length;j++){
+            sum += parseInt( arrs[i][j] )
+            newarrs.push(sum)
+        }
+    }
+average=sum/newarrs.length
+
+    alert(average)
+</script>
+</body>
+</html>

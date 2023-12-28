@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Float or Int</title>
+</head>
+<body>
+<script>
+    let num=prompt("Input number want to be checked")
+    let number = Number(num)
+    let result;
+    if( Number.isInteger(number) == false){
+        console.log(typeof(number))
+       result = parseInt(number)
+        alert( "Your input number is Finite,fixed number is: "+ result)
+    }else {
+        alert("Input number is: Interger")
+    }
+</script>
+</body>
+</html>

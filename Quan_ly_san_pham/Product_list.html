@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+    <style>
+        button {
+            background-color: #4ad74a;
+            border: midnightblue;
+        }
+    </style>
+</head>
+<body>
+<h3>Add new product</h3>
+<input type="text" id="add" placeholder="New product">
+<button type="button" onclick="addProduct(),load()">Add</button>
+<br>
+<br>
+<span> <b>Display All Product</b></span> <span id="productsAmount"></span>
+<p> <b>Product Name</b></p>
+</table>
+<div id="show">
+</div>
+</body>
+</html>
+<script>
+    let productList = ["Apple", "Samsung", "Xiaomi"]
+    let editingIndex = -1
+    function editProduct(index) {
+        editingIndex = index;
+        load()
+    }
+    function load() {
+        let sout;
+        sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+        for (let i = 0; i < productList.length; i++) {
+            sout = sout + "<tr>";
+            if (i === editingIndex) {
+                sout += "<td><input type='text' id='editInput' value=' " + productList[i] + "' > </td>"
+                sout += "<td><button type='button' onclick='saveEdit()'>Save</button></td> "
+            }
+            sout += "<th>" + productList[i] + "</th>"
+            sout += "<td>" + " <button id='product[i]' onClick=\"editProduct(" + i + ")\">Edit</button> " + "</td>"
+            sout += "<td>" + " <button onClick=\"deleteProduct(" + i + ")\">Delete</button> " + "</td>"
+            sout = sout + "</tr>";
+        }
+        sout = sout + "</table>";
+        document.getElementById("show").innerHTML = sout
+        document.getElementById("productsAmount").innerHTML = productList.length + " products"
+    }
+    load()
+    function addProduct() {
+        let newProduct = document.getElementById("add").value
+        productList.push(newProduct)
+        productList.sort()
+        console.log(productList)
+    }
+    function deleteProduct(index) {
+        productList.splice(index, 1);
+        load();
+    }
+    function saveEdit() {
+        let newProductName = document.getElementById("editInput").value;
+        productList[editingIndex] = newProductName;
+        editingIndex = -1;
+        load();
+    }
+</script>
