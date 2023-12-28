@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Converter</title>
+</head>
+<body>
+<h1>Temperature Converter</h1>
+<span>Fahrenheit: </span> <input oninput="converter()" placeholder="Fahrenheit" type="number" id="fDegree">
+<br>
+<span>Celcius: </span> <span id="cDegree"></span>
+<script>
+    function converter(){
+        let F = parseFloat(document.getElementById("fDegree").value)
+        let result =  parseFloat((F-32)/1.8)
+        let C = parseFloat (result)
+        document.getElementById("cDegree").innerHTML=C
+    } converter()
+</script>
+</body>
+</html>
