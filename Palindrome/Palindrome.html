@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome Check</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    function isPalindrome(word) {
+        let arr = word.split('').reverse().join('');
+        if (word === arr) {
+            alert("World is Palinprome")
+        } else {
+            alert("Word is not Palinprome")
+        }
+    }
+
+    let input = prompt("Input word to check")
+    isPalindrome(input)
+</script>
