@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="4" id="result"></th>
+    <tr>
+        <td>
+            <button id="num7" onclick="inputNum(7)" value="7">7</button>
+        </td>
+        <td>
+            <button id="num8" onclick="inputNum(8)" value="8">8</button>
+        </td>
+        <td>
+            <button id="num9" onclick="inputNum (9)" value="9">9</button>
+        </td>
+        <td>
+            <button id="devide" onclick="inputDevide()" value="/"> /</button>
+        </td>
+        <td rowspan="2">
+            <button id="reset" type="reset" onclick="reset()">AC</button>
+        </td>
+
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button id="num4" onclick="inputNum(4)" value="4">4</button>
+        </td>
+        <td>
+            <button id="num5" onclick="inputNum(5)" value="5">5</button>
+        </td>
+        <td>
+            <button id="num6" onclick="inputNum(6)" value="6">6</button>
+        </td>
+        <td>
+            <button id="times" onclick="inputTimes()" value="*">X</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button id="num1" onclick="inputNum(1)" value="1">1</button>
+        </td>
+        <td>
+            <button id="num2" onclick="inputNum(2)" value="2">2</button>
+        </td>
+        <td>
+            <button id="num3" onclick="inputNum(3)" value="3">3</button>
+        </td>
+        <td>
+            <button id="plus" onclick="inputPlus()" value="+">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button id="dot" onclick="inputDot()" value=".">.</button>
+        </td>
+        <td>
+            <button id="num0" onclick="inputNum(0)" value="0">0</button>
+        </td>
+        <td>
+            <button id="euqal" onclick="inputEqual()" value="=">=</button>
+        </td>
+        <td>
+            <button id="minus" onclick="inputMinus()" value="-">-</button>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+    let display = document.getElementById("result")
+    let currentInput = ''
+
+    function inputNum(number) {
+        currentInput += "" + number
+        display.innerText = currentInput
+    }
+function input
+    function inputPlus() {
+        currentInput += document.getElementById("plus").value
+        display.innerText = currentInput
+    }
+
+    function inputMinus() {
+        currentInput += document.getElementById("minus").value
+        display.innerText = currentInput
+    }
+
+    function inputTimes() {
+        currentInput += document.getElementById("times").value
+        display.innerText = currentInput
+    }
+
+    function inputDevide() {
+        currentInput += document.getElementById("devide").value
+        display.innerText = currentInput
+    }
+
+    function inputEqual() {
+        currentInput = eval(currentInput)
+        display.innerText = currentInput
+    }
+
+    function inputDot() {
+        currentInput += document.getElementById("dot").value
+        display.innerText = currentInput
+    }
+    function reset(){
+        currentInput=''
+        display.innerText =currentInput
+    }
+
+
+</script>

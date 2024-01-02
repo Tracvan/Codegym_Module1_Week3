@@ -17,11 +17,10 @@
 <button type="button" onclick="addProduct(),load()">Add</button>
 <br>
 <br>
-<span> <b>Display All Product</b></span> <span id="productsAmount"></span>
-<p> <b>Product Name</b></p>
+<span> <b>Display All Product</b>  </span> <span id="productsAmount"></span>
+<p> <b>Product Name</b> </p>
 <div id="show">
 </div>
-
 </body>
 </html>
 <script>
@@ -37,11 +36,11 @@
         for (let i = 0; i < productList.length; i++) {
             sout = sout + "<tr>";
             if (i === editingIndex) {
-                sout += "<td><input type='text' id='editInput' value=' " + productList[i] + "' > </td>"
+                sout += "<td><input type='text' id='editInput' > </td>"
                 sout += "<td><button type='button' onclick='saveEdit()'>Save</button></td> "
             }
             sout += "<th>" + productList[i] + "</th>"
-            sout += "<td>" + " <button id='product[i]' onClick=\"editProduct(" + i + ")\">Edit</button> " + "</td>"
+            sout += "<td>" + " <button  onClick=\"editProduct(" + i + ")\">Edit</button> " + "</td>"
             sout += "<td>" + " <button onClick=\"deleteProduct(" + i + ")\">Delete</button> " + "</td>"
             sout = sout + "</tr>";
         }
